@@ -33,7 +33,12 @@ public class main_misc {
 			}
 			swap(v,l,r);
 		}
-		swap(v,l,end);
+		if(v[l] > v[end]) {
+			swap(v,l,end);
+		}
+		else {
+			l = end;
+		}
 		
 		quickSort(v,strt,l-1);
 		quickSort(v,l+1,end);
